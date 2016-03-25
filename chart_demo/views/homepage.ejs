@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/styles/home.css">
+<div class="container">
+  <form id="tmp">
+    <div class="btn-group pull-right">
+      <button type="submit" class="btn btn-primary">查询</button>
+    </div>
+    <div id="sandbox-container" class="pull-right">
+      <div class="input-daterange input-group" id="datepicker">
+        <input type="text" class="form-control" name="start" id="start" />
+        <span class="input-group-addon">to</span>
+        <input type="text" class="form-control" name="end" id="end" />
+      </div>
+    </div>
+  </form>
+  <canvas id="myChart" width="960px" height="350px"></canvas>
+</div>
+
+<script type="text/javascript">
+  $('#datepicker').datepicker({
+    autoclose: true,
+    todayHighlight: true,
+    format: 'yyyy/mm/dd'
+  }).on('hide', function() {
+    console.log($('#start').val());
+  });
+  var datas = {
+    labels: [<%= datas.labels %>],
+    datasets: [{
+      fillColor: "rgba(220,220,220,0.5)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      data: [<%= datas.datasets[0] %>]
+    }, {
+      fillColor: "rgba(151,187,205,0.5)",
+      strokeColor: "rgba(151,187,205,1)",
+      pointColor: "rgba(151,187,205,1)",
+      pointStrokeColor: "#fff",
+      data: [<%= datas.datasets[1] %>]
+    }]
+  };
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var myLineChart = new Chart(ctx).Line(datas, {
+    bezierCurve: false,
+    bezierCurveTension: 0
+  });
+</script>
