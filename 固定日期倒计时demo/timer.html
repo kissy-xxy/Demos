@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+	<style>
+		div{
+			height: 20px;
+			margin-top: 10px;
+			background: #999;
+		}
+	</style>
+</head>
+<body>
+		<!-- <div class="append">appendTo</div>
+		<div class="remove">empty</div>
+		<div class="detach">detach</div> -->
+		<div id="time"></div>
+		<script>
+			var a;
+			$('.remove').hover(function(){
+    		a = $(this).empty();
+			});
+			$('.detach').hover(function(){
+				a = $(this).detach();
+			});
+			$('.append').hover(function(){
+				$(this).appendTo(a);
+			});
+		</script>
+		<script type="text/javascript">
+			var day,hour,minutes,second,t;
+			var time_now = new Date('2015-03-15 16:53:32');
+			$('#time').text(time_now)
+			var time_end = new Date('2016-03-26 17:54:33');
+			time_end = time_end.getTime();
+			time_now = time_now.getTime();
+			var during = time_end - time_now;
+			var count = function(during_time){
+				if (during_time < 1000) {
+					day=hour=minutes=second=0;
+					clearInterval(t);
+					$('#time').text(day + '__' + hour + '__'  + minutes + '__' +second);
+					return ;
+				}
+				day = Math.floor(during_time/86400000);
+				var hour1 = Math.floor(during_time/3600000);
+				hour = hour1 - 24*day;
+				var minutes1 = Math.floor(during_time/60000);
+				minutes = minutes1 - 60*hour1;
+				second = Math.floor(during_time/1000);
+				second = second - 60*minutes1;
+				$('#time').text(day + '__' + hour + '__'  + minutes + '__' +second);
+			};
+			if(during > 0){
+				count(during);
+			}else{
+				day=hour=minutes=second=0;
+			}
+			t = setInterval(function(){
+				during -= 1000;
+				count(during);
+			},1000);
+		</script>
+</body>
+</html>
