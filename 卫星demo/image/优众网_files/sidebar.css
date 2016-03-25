@@ -1,0 +1,148 @@
+/*******   侧导航begin  ********/
+.nav_fix{
+  position: absolute;
+  bottom: 70px;
+  left: 9px;
+  width: 51px;
+  height: 51px;
+  z-index: 5;
+  border-radius: 26px;
+  -webkit-border-radius: 26px;
+  -moz-border-radius: 26px;
+}
+.nav_circle{
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  -webkit-border-radius: 26px;
+  -moz-border-radius: 26px;
+  background-position: -160px -1px;
+}
+.nav_fix.push .down_shadow{
+  border-radius: 26px;
+  -webkit-border-radius: 26px;
+  -moz-border-radius: 26px;
+}
+.nav_layer, 
+.pay_layer, 
+.fail_order_layer, 
+.success_order_layer,
+.slide_layer{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+}
+.nav_body{
+  position: relative;
+  width: 100px;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+}
+.nav_body{
+  transition: transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transform: translate(-100px,0);
+  -webkit-transform: translate(-100px,0);
+  -moz-transform: translate(-100px,0);
+  -o-transform: translate(-100px,0);
+}
+.nav_body.appear{
+  transform: translate(0,0);
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -o-transform: translate(0,0);
+}
+.nav_other{
+  height: 100%;
+}
+.nav_auto{
+  width: 100%;
+  /*------------*/
+  height: 432px;
+  position: absolute;
+  top:50%;
+  margin-top: -216px;
+  /*-------------*/
+  /*overflow-y: auto; */
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+}
+.nav_enter{
+  height:72px;
+  width:40px;
+  margin: 0 auto;
+  position: relative;
+}
+.nav_enter div{
+  position: relative;
+  zoom:1;
+  width: 40px;
+  height: 40px;
+  margin:6px auto 4px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+.nav_enter p{
+  font-size: 1.1em;
+  color: #fff;
+  line-height:12px;
+}
+.nav_enter.push{
+  opacity: 0.4;
+}
+.nav_enter span{
+  display: block; 
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top:6px;
+  left: 6px;
+}
+.nav_home span{
+  top:5px;
+  left: 7px;
+  background-position: -1px -1px;
+}
+.nav_sort span{
+  top:9px;
+  background-position: -27px -3px;
+}
+.nav_brand span{
+  top:7px;
+  background-position: -54px -1px;
+}
+.nav_search span{
+  background-position: -81px -1px;
+}
+.nav_account span{
+  background-position: -107px -2px;
+}
+.nav_cart span{
+  top:8px;
+  background-position: -133px -2px;
+}
+.nav_cart em{
+  display: block;
+  position:absolute;
+  right:-7px;
+  top:-7px;
+  width: 20px;
+  height: 20px;
+  line-height: 22px;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  font-size: 1.2em;
+  color: #fff;
+  background: #99307d;
+}
+/********   侧导航end  *******/

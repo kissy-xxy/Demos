@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>一份来自未来的邀请</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/library.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.transit.js"></script>
+	<script type="text/javascript" src="js/iscroll.min.js"></script>
+	<style>
+		body{
+			min-width: 320px;
+			margin: 0 auto;
+			padding: 0;
+			background: #000c22;
+		}
+		#wrapper{
+			width: 320px;
+			margin: 0 auto;
+			background: #000c20;
+			position: relative;
+			overflow: hidden;
+		}
+		.car{
+			width: 36px;
+			height: 85px;
+			background-image: url(image/car.png);
+			background-size:36px 85px;
+			position: absolute;
+			top: 10px;
+			left: 10px; 
+		}
+		.plane{
+			width: 115px;
+			height: 118px;
+			background-image: url(image/plan.png);
+			background-size:115px 118px; 
+			position: absolute;
+			top: 700px;
+			left: -50px;
+		}
+		.hide{
+			display: none;
+		}
+		.part_star{
+			display: block;
+			list-style: none;
+			margin: 50px 0 0 0;
+			padding: 0;
+			height: 315px;
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+		.part_star li{
+			display: block;
+			position: absolute;
+			left: 50%;
+			border: #28d0d8 solid 1px;
+		}
+		.sun{
+			width: 24px;
+			height: 24px;
+			border-radius: 24px;
+			background: orange;
+			top: 150px;
+			margin-left: -12px;
+			border:none !important;
+		}
+		.mercury{
+			width: 130px;
+			height: 60px;
+			border-radius: 65px / 30px;
+			top: 135px;
+			margin-left: -65px;
+			box-shadow: inset 0 0 12px rgba(40,184,192,0.6);
+		}
+		.mercury::after{
+			content: " ";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 65px / 30px;
+			box-shadow: 0 0 12px rgba(40,184,192,0.6);
+		}
+		.venus{
+			width: 220px;
+			height: 110px;
+			border-radius: 110px / 55px;
+			top: 125px;
+			margin-left: -110px;
+			box-shadow: inset 0 0 12px rgba(40,184,192,0.6);
+		}
+		.venus::after{
+			content: " ";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 110px / 55px;
+			box-shadow: 0 0 12px rgba(40,184,192,0.6);
+		}
+		.earth{
+			width: 300px;
+			height: 150px;
+			border-radius: 150px / 75px;
+			top: 120px;
+			margin-left: -150px;
+			box-shadow: inset 0 0 12px rgba(40,184,192,0.6);
+		}
+		.earth::after{
+			content: " ";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 150px / 75px;
+			box-shadow: 0 0 12px rgba(40,184,192,0.6);
+		}
+		.mars{
+			width: 360px;
+			height: 180px;
+			border-radius: 180px / 90px;
+			top: 115px;
+			margin-left: -180px;
+			box-shadow: inset 0 0 12px rgba(40,184,192,0.6);
+		}
+		.mars::after{
+			content: " ";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 180px / 90px;
+			box-shadow: 0 0 12px rgba(40,184,192,0.6);
+		}
+		.last_star{
+			width: 720px;
+			height: 300px;
+			border-radius: 360px / 150px;
+			top: 35px;
+			margin-left: -360px;
+			box-shadow: inset 0 0 12px rgba(40,184,192,0.6);
+		}
+		.last_star::after{
+			content: " ";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 360px / 150px;
+			box-shadow: 0 0 12px rgba(40,184,192,0.6);
+		}
+		.part_star li span{
+			display: block;
+			position: absolute;
+			z-index: 1;
+		}
+		.mercury span{
+			width: 18px;
+			height: 18px;
+			background: #f0f0d8;
+			border-radius: 18px;
+			-webkit-animation:mercuryframe 10s ease-out infinite;
+		}
+		.venus span{
+			width: 16px;
+			height: 16px;
+			background: #b0b0b0;
+			border-radius: 16px;
+		}
+		.earth span{
+			width: 18px;
+			height: 18px;
+			background: #287888;
+			border-radius: 18px;
+		}
+		.mars span{
+			width: 20px;
+			height: 20px;
+			background: #f0d8b0;
+			border-radius: 20px;
+		}
+		@-webkit-keyframes mercuryframe{
+			from{top: 22px;left: -9px;}
+			10%{top: 1px;left: 5px;}
+			20%{top:-8px;left: 30px;}
+			25%{top: -9px;left: 56px;}
+			50%{top: 22px;left: 121px;}
+			75%{top: 51px;left: 56px;}
+			to{top: 22px;left: -9px;}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="content">
+			<ul class="part_star">
+				<li class="sun"></li>
+				<li class="mercury"><span></span></li>
+				<li class="venus"><span></span></li>
+				<li class="earth"><span></span></li>
+				<li class="mars"><span></span></li>
+				<li class="last_star"></li>
+			</ul>
+			<div class="car "></div>
+			<div class="plane "></div>
+		</div>
+	</div>
+	<div class="music">
+
+	</div>
+</body>
+	<script>
+		$(function(){
+			var height = DeviceInfo.height;
+			$('#wrapper').css('height',height);
+			$('.content').css('height',height * 5);
+			var scroll = new IScroll($('#wrapper')[0], {
+					probeType: 2,
+          scrollX: false,
+          scrollY: true,
+          snap: false,
+          checkDOMChanges: true, 
+          bounce: false
+        });
+			document.addEventListener('touchmove',function(e){e.preventDefault();},false);
+			scroll.on("scroll",onscroll);
+			scroll.on("scrollEnd",onscroll);
+
+			function onscroll(){
+				var y = -this.y;
+				if( y> 10 && y<200){
+					var t = (-10 - $('.content').offset().top)*1.5;
+					$('.car').transition({y:t},1,'linear');
+				}else if( y > 200 && y < 610){
+					var t = -($('.content').offset().top + 100);
+					$('.plane').transition({x:t-100,y:100-t},1,'linear');
+				}
+			}
+		})
+	</script>
+</html>

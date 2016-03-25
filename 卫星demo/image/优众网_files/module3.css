@@ -1,0 +1,8 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 3),only screen and (-o-min-device-pixel-ratio: 3/1),only screen and (min--moz-device-pixel-ratio: 3),only screen and (min-device-pixel-ratio: 3){
+  .go_pic{
+    background-image: url(/images/go_pic@3x.png?1305510283);
+  }
+  .font_pic{
+    background-image: url(/images/font_pic@3x.png?1305510283);
+  }
+}

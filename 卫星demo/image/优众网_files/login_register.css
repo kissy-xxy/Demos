@@ -1,0 +1,222 @@
+/*  后缀提示 */
+.tip_angle{
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border: 5px rgba(85,85,85,0.9) solid;
+  border-color: rgba(85,85,85,0) rgba(85,85,85,0) rgba(85,85,85,0.9) rgba(85,85,85,0);
+}
+.suffix_tip{
+  position: absolute;
+  top:30px;
+  z-index: 1;
+  margin:0 1.4%;
+  width: 97.2%;
+  height: 66px;
+  background: rgba(85,85,85,0.9);
+  color: #fff;
+  font-weight: bold;
+}
+.suffix_tip span{
+  width: 29.33%;
+  padding: 13px 0 0 4%;
+  line-height: 14px;
+  font-size: 1.2em;
+}
+/* wechat login */
+.wechat_zone h1{
+  font-size: 1.8em;
+  margin-top: 14px;
+}
+.wechat_zone p, .wx_txt p{
+  font-size: 1.4em;
+  color: #8e8e8e;
+  margin-top: 16px;
+  text-align: center;
+}
+.wx_txt p{
+  margin-top: 18px !important ;
+}
+.manage_txt{
+  font-size: 1.4em;
+  color: #8e8e8e;
+  padding-top: 18px;
+  text-align: center;
+}
+/*  登录  */
+.complete_box, .manage_box, .attached_content, .wx_setting, .login_box, .register_box, .address_box{
+  margin: 0 5%;
+  height: auto;
+  -webkit-overflow-scrolling:touch;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+.register_box .clear_txt{
+  right: 3.3%;
+}
+.address_box .clear_txt{
+  right: 8%;
+}
+.read_in{
+  height: 38px;
+  background: #f6f6f6;
+  padding:0 4.4%;
+  font-size: 1.7em !important;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  margin-top: 10px;
+  position: relative;
+}
+.read_in span{
+  line-height: 38px;
+  color: #000;
+}
+.read_in input{
+  margin-left: 3.7%;
+  background:transparent;
+  line-height: 24px;
+  margin-top: 7px;
+  width: 74%;
+}
+.address_box .read_in input{
+  width: 61%;
+}
+.register_box .read_in input{
+  width: 70.4%;
+}
+.read_in.psd input{
+  width: 76%;
+}
+.read_in.rpsd input{
+  width: 64%;
+}
+.manage_set.btn,
+.login_btn.btn, 
+.register_btn.btn,
+.binding_btn.btn,
+.manage_binding_btn.btn,
+.wechat_btn.btn{
+  margin-top: 17px;
+  background: #000;
+}
+.manage_set.btn{
+  margin-bottom: 29px;
+}
+.set_new_account{
+  margin-bottom: 11px;
+  border-bottom: 1px solid #8e8e8e;
+}
+.wechat_btn.btn{
+  margin-top: 10px;
+  background: #73ae1f;
+}
+.wechat_btn em{
+  width: 25px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  top:4px;
+  margin-right: 5px;
+  background-position: -27px -30px;
+}
+.reg_btn.btn, .log_btn.btn, .create_btn.btn{
+  margin:10px 0 50px;
+  line-height: 36px;
+  height: 36px;
+  color: #000 !important;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+.create_btn.btn{
+  margin: 21px auto 0 !important;
+}
+.manage_set .order_load,
+.login_btn .order_load,
+.register_btn .order_load,
+.wechat_btn .order_load{
+  position: absolute;
+  top:-38px;
+  left:0;
+  width: 100%;
+  height:100%;
+}
+.division{
+  margin-top: 10px;
+}
+.email{
+  margin-top: 13px;
+}
+.weixin.division{
+  margin-top: 20px;
+}
+.join_us{
+  color: #8e8e8e;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 16px;
+}
+/*  注册  */
+.read_in .right_ico{
+  position: absolute;
+  right:3.3%;
+  top:12px;
+}
+.captcha_content{
+  height: 100%;
+  width: 66.6%;
+  margin:0 5% 0 0;
+  position: static !important;
+}
+.captcha_input{
+  width: 60% !important;
+  padding: 0;
+  font-size: 15px !important;
+}
+.captcha_need img{
+  position: absolute;
+  right: 20%;
+  top:6px;
+}
+.register_submit,
+.login_submit,
+.search_submit,
+.affirm_submit{
+  height: 0 !important;
+  width: 0 !important;
+}
+/* 地址 */
+.read_in input.tel{
+  width: 64%;
+}
+.read_in.detail{
+  height: 127px;
+}
+.read_in select{
+  margin-left: 5.5%;
+  height: 38px;
+  width: 80%;
+  line-height: 38px;
+  background: transparent;
+}
+.address_box .read_in input{
+  top:9px;
+}
+.read_in textarea{
+  margin: 9px 0 0 5.5%;
+  width: 66%;
+  height: 108px;
+  background: transparent;
+  line-height: 20px;
+  -webkit-overflow-scrolling:touch;
+  overflow-y:auto;
+  resize:none;
+}
+.affirm.btn{
+  margin: 16px 0 20px;
+}
+.affirm.btn > span{
+  display: block;
+}

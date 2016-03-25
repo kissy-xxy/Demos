@@ -1,0 +1,30 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min--moz-device-pixel-ratio: 2),only screen and (min-device-pixel-ratio: 2){
+  /**************************************** begin public  **************/
+  .failed.pro_img{
+    background: url(/images/fail@2x.png?1305510283) no-repeat center, #fcfcfc;
+    background-size: 20px 20px;
+  }
+  .sprites{
+    background-image: url(/images/sprites@2x.png?1305510283);
+  }
+  .sprite_icos{
+    background-image: url(/images/new_sprite@2x.png?1305510283);
+  }
+  /**************************************** end public  **************/
+  /**************************************** begin home  **************/
+  .cates{
+    background-image:url(/images/cates@2x.jpg?1305510283);
+  }
+  /**************************************** end home  **************/
+  /************** 微信去浏览器下载提示 ****************/
+  .go_pic{
+    background-image: url(/images/go_pic@2x.png?1305510283);
+  }
+  .font_pic{
+    background-image: url(/images/font_pic@2x.png?1305510283);
+  }
+  .wechat_share_font{
+    background-image: url(/images/wechat_share_font_pic@2x.png?1305510283);
+  }
+  /************** end 微信去浏览器下载提示 ****************/
+}

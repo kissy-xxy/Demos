@@ -1,0 +1,186 @@
+/* ********************trade-paymode *****/
+/*  在线支付浮层  */
+.pay_layer{
+  background: rgba(0,0,0,0.6);
+}
+.pay_body{
+  position: absolute;
+  top:0;
+  left: 100%;
+  background: #fff;
+  width: 56%;
+  height: 100%;
+}
+.pay_body{
+  transition: transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transform: translate(0,0);
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -o-transform: translate(0,0);
+}
+.pay_body.appear{
+  transform: translate(-100%,0);
+  -webkit-transform: translate(-100%,0);
+  -moz-transform: translate(-100%,0);
+  -o-transform: translate(-100%,0);
+}
+.pay_other{
+  width:44%;
+  height: 100%;
+}
+.time_tip{
+  margin-top: 20px;
+  font-size: 1.4em;
+  color: #911573;
+  text-align: center;
+}
+.banks{
+  background-image: url(/images/banks.png?1305510283);
+  background-repeat: no-repeat;
+  background-size: 106px 106px;
+}
+.zhaoshang, .zhifubao, .zhongguo, .wechat_pay{
+  width: 101px;
+  height: 34px;
+  border: 2px solid #bdbdbd;
+  margin: 22px auto 0;
+  text-align: center;
+}
+.wechat_pay span, .wechat_pay p{
+  display: inline-block;
+  line-height: 34px;
+  font-size: 1.4em;
+}
+.zhaoshang{
+  background-position: -3px 0;
+}
+.zhifubao{
+  background-position: -3px -35px; 
+}
+.zhongguo{
+  background-position: -3px -71px;
+}
+.zhaoshang.active, .zhifubao.active, .zhongguo.active{
+  border-color:#911573;
+}
+/* 订单提交失败提示浮层 */
+.fail_order_layer, .success_order_layer{
+  background: rgba(0,0,0,0.6);
+}
+.fail_order_body, .success_order_body{
+  background: #fff;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 194px;
+  text-align: center;
+}
+.fail_order_body h1{
+  font-size: 2em;
+  margin-top: 50px;
+}
+.fail_ico{
+  display: inline-block;
+  position: relative;
+  top:3px;
+  margin-right: 5px;
+  width: 22px;
+  height: 22px;
+  background-position: -2px -135px;
+}
+.fail_order_body > p, .success_order_body > p{
+  margin-top: 7px;
+  font-size: 1.4em;
+  color: #8e8e8e;
+}
+.re_submit_order.btn, .ignore_order.btn{
+  position: absolute;
+  bottom: 16px;
+  width: 42.5%;
+}
+.re_submit_order.btn{
+  right:5%;
+}
+.ignore_order.btn{
+  left: 5%;
+  color: #000;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #2f2f2f;
+}
+/* 货到付款提示浮层 */
+.success_order_body h1{
+  font-size: 2em;
+  margin-top: 32px;
+}
+.success_order_body .phone{
+  margin-top: 31px;
+  margin-bottom: 10px;
+}
+.success_order_body .phone p{
+  font-size: 1.4em;
+  color: #8e8e8e;
+  display: inline-block;
+}
+.success_order_body .phone p:last-child{
+  color: #911573;
+  display: inline-block;
+  line-height: 9px;
+  margin-left: 4px;
+}
+.scan_order.btn{
+  color: #000;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #2f2f2f;
+  width: 90%;
+  margin-bottom: 14px;
+}
+/* 在线支付提示浮层 */
+.success_order_body h1 p{
+  display: inline-block;
+  line-height: 12px;
+  color: #911573;
+}
+.go_pay.btn{
+  color: #000;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #2f2f2f;
+  width: 90%;
+  margin-top: 46px;
+}
+.go_pay.no_border{
+  border: none;
+  width: 255px;
+  margin: 0 auto;
+  margin-top: 46px;
+}
+.go_pay.no_border p{
+  float: left;
+  margin-right: 6px;
+}
+.go_pay.no_border p:last-child{
+  margin-right: 0;
+}
+.success_layer{
+  width: 100%;
+  height: 59%;
+}
+/* 支付成功提示浮层 */
+.success_ico{
+  height: 22px;
+  width: 23px;
+  position: relative;
+  top:3px;
+  margin-right: 5px;
+  background-position: -173px -80px;
+}
+/* 在线付款完成与否操作提示 */
+.ignore_order .loading16 > div{
+  background: #a6a6a6;
+}
