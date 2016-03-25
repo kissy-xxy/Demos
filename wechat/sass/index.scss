@@ -1,0 +1,323 @@
+@import 'compass/reset';
+@import 'compass/css3';
+@import 'compass/typography';
+
+@mixin calcsize($select: width,$num: 100%){
+  #{$select}: -webkit-calc(#{$num});
+  #{$select}: -moz-calc(#{$num});
+  #{$select}: -ms-calc(#{$num});
+  #{$select}: -o-calc(#{$num});
+  #{$select}: calc(#{$num});
+}
+body{
+  font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","å¾®è½¯é›…é»‘",Arial,sans-serif;
+  height: 100%;
+  -webkit-font-smoothing:antialiased;
+  line-height: 1.6;
+  .hide{
+    display: none !important;
+  }
+  pre{
+    white-space: pre-wrap;
+  }
+  .left{
+    float: left;
+  }
+  #chatArea{
+    padding: 0 19px;
+    background:#eee;
+    overflow-y: scroll;
+    height: 100%;
+    position: relative;
+    .clearfix{
+      @include clearfix;
+    }
+    .content{
+      overflow: hidden;
+    }
+    .message{
+      margin-bottom: 16px;
+      &.me{
+        .nickname{
+          text-align: right;
+          padding-left: 0;
+          padding-right: 10px;
+        }
+        .avatar{
+          float: right;
+        }
+        .duration{
+          left: -80px;
+          text-align: right;
+        }
+        .picture{
+          background:transparent;
+          img{
+            float: right;
+          }
+        }
+        .bubble_cont{
+          overflow: hidden;
+          &.r_true{
+            .custom_emoji{
+              margin-top: 9px;
+              margin-right: 13px;
+            }
+            .picture{
+              background: #b2e281;
+              img{
+                margin-top: 9px;
+                margin-right: 13px;
+              }
+            }
+            .reply{
+              .picture{
+                background: transparent;
+                img{
+                  float: left;
+                }
+              }
+            }
+          }
+        }
+        .custom_emoji{
+          overflow: hidden;
+          img{
+            float: right;
+          }
+        }
+      }
+      .message_system{
+        text-align: center;
+        margin: 10px auto;
+        max-width: 50%;
+        .content{
+          display: inline-block;
+          background-color: #dcdcdc;
+          font-size: 12px;
+          padding: 1px 18px;
+          color: #fff;
+          border-radius: 2px;
+        }
+      }
+      .nickname{
+        font-weight: 400;
+        padding-left: 10px;
+        font-size: 12px;
+        height: 22px;
+        line-height: 24px;
+        color: #4f4f4f;
+        overflow: hidden;
+        @include ellipsis(true);
+      }
+      .avatar{
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        cursor:pointer;
+        float: left;
+      }
+      .bubble{
+        background-color: #fff;
+        &.no_arrow{
+          &.bubble_primary{
+            background:transparent;
+            .bubble_cont.r_true{
+              background:#b2e281;
+            }
+          }
+          background:transparent;
+          max-width: 100%;
+          &:before,&:after{
+            display: none;
+          }
+          .bubble_cont{
+            border-radius: 3px;
+            overflow: hidden;
+            &.r_true{
+              background:#fff;
+              .picture{
+                img{
+                  margin-top: 9px;
+                  margin-left: 13px;
+                }
+              }
+              .custom_emoji{
+                img{
+                  margin-top: 9px;
+                  margin-left: 13px;
+                }
+              }
+              .reply{
+                .picture{
+                  img{
+                    margin: 0;
+                  }
+                }
+              }
+            }
+            .reply{
+              margin-top: 9px;
+            }
+          }
+        }
+        &.bubble_primary{
+          background-color: #b2e281;
+        }
+        &:before,&:after{
+          position: absolute;
+          top: 14px;
+          border: 6px solid transparent;
+          content:"  ";
+        }
+        &.right{
+          float: right;
+          &:before,&:after{
+            left: 100%;
+            border-left-color: #b2e281;
+            border-left-width: 4px;
+          }
+        }
+        &.left{
+          &:before,&:after{
+            right: 100%;
+            border-right-color: #fff;
+            border-right-width: 4px;
+          }
+        }
+        @include calcsize('max-width','100% - 70px');
+        min-height: 1em;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        text-align: left;
+        font-size: 14px;
+        border-radius: 3px;
+        margin: 0 10px;
+        .bubble_cont{
+          pre{
+            padding: 9px 13px;
+          }
+          .voice{
+            padding: 7px 13px;
+            min-width: 27px;
+            i{
+              width: 23px;
+              height: 23px;
+              vertical-align: middle;
+              display: inline-block;
+            }
+            .web_wechat_voice_gray{
+              background:url(../images/sprite27fe59.png) 0 -2427px;
+              &.web_wechat_voice_gray_playing{
+                background:url(../images/web_wechat_voice_gray_playing27fe59.gif);
+              }
+            }
+            .web_wechat_voice_green{
+              background:url(../images/sprite27fe59.png) 0 -2450px;
+              &.web_wechat_voice_playing{
+                background:url(../images/web_wechat_voice_playing27fe59.gif);
+              }
+            }
+          }
+          .duration{
+            position: absolute;
+            right: -75px;
+            width: 55px;
+            color: #888;
+            cursor:default;
+            i{
+              margin-left: 5px;
+            }
+            .web_wechat_noread{
+              background:url(../images/sprite27fe59.png) 0 -1422px;
+              width: 11px;
+              height: 11px;
+            }
+          }
+          .picture{
+            width: 100%;
+            border-radius: 3px;
+            overflow: hidden;
+            img{
+              max-width: 70%;
+            }
+          }
+          .custom_emoji{
+            img{
+              width: 60px;
+            }
+          }
+          .reply{
+            border-radius: 3px;
+            margin: 0 13px 9px 13px;
+            padding: 9px 13px;
+            background:#f3f3f3;
+            pre{
+              padding: 0;
+            }
+            .nickname{
+              padding: 0;
+            }
+            .voice{
+              background:#fff;
+              display: inline-block;
+              position: relative;
+              @include calcsize('max-width','100% - 76px');
+            }
+            .duration{
+              width: 45px;
+              position: relative;
+              right: 0;
+              margin-left: 10px;
+              margin-top: 7px;
+              float: right;
+              .web_wechat_noread{
+                display: inline-block;
+              }
+            }
+            &.me{
+              overflow: hidden;
+              .content{
+                float: right;
+              }
+              .voice{
+                background:#b2e281;
+              }
+              .duration{
+                width: 25px;
+                float: left;
+                left: 0;
+                text-align: left;
+                margin-right: 10px;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+        .loading{
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          margin-right: 13px;
+          margin-top: -8px;
+        }
+        .ico_fail{
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          margin-top: -11px;
+          margin-right: 9px;
+          cursor:pointer;
+        }
+        .web_wechat_message_fail{
+          background:url(../images/sprite27fe59.png) 0 -1270px;
+          width: 22px;
+          height: 22px;
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

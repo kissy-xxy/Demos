@@ -1,0 +1,438 @@
+@charset "UTF-8";
+/* line 5, ../../../.rvm/gems/ruby-1.9.3-p550@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rvm/gems/ruby-1.9.3-p550@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rvm/gems/ruby-1.9.3-p550@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rvm/gems/ruby-1.9.3-p550@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rvm/gems/ruby-1.9.3-p550@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rvm/gems/ruby-1.9.3-p550@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rvm/gems/ruby-1.9.3-p550@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rvm/gems/ruby-1.9.3-p550@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p550@global/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 12, ../sass/index.scss */
+body {
+  font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","å¾®è½¯é›…é»‘",Arial,sans-serif;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+/* line 17, ../sass/index.scss */
+body .hide {
+  display: none !important;
+}
+/* line 20, ../sass/index.scss */
+body pre {
+  white-space: pre-wrap;
+}
+/* line 23, ../sass/index.scss */
+body .left {
+  float: left;
+}
+/* line 26, ../sass/index.scss */
+body #chatArea {
+  padding: 0 19px;
+  background: #eee;
+  overflow-y: scroll;
+  height: 100%;
+  position: relative;
+}
+/* line 32, ../sass/index.scss */
+body #chatArea .clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 35, ../sass/index.scss */
+body #chatArea .content {
+  overflow: hidden;
+}
+/* line 38, ../sass/index.scss */
+body #chatArea .message {
+  margin-bottom: 16px;
+}
+/* line 41, ../sass/index.scss */
+body #chatArea .message.me .nickname {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 10px;
+}
+/* line 46, ../sass/index.scss */
+body #chatArea .message.me .avatar {
+  float: right;
+}
+/* line 49, ../sass/index.scss */
+body #chatArea .message.me .duration {
+  left: -80px;
+  text-align: right;
+}
+/* line 53, ../sass/index.scss */
+body #chatArea .message.me .picture {
+  background: transparent;
+}
+/* line 55, ../sass/index.scss */
+body #chatArea .message.me .picture img {
+  float: right;
+}
+/* line 59, ../sass/index.scss */
+body #chatArea .message.me .bubble_cont {
+  overflow: hidden;
+}
+/* line 62, ../sass/index.scss */
+body #chatArea .message.me .bubble_cont.r_true .custom_emoji {
+  margin-top: 9px;
+  margin-right: 13px;
+}
+/* line 66, ../sass/index.scss */
+body #chatArea .message.me .bubble_cont.r_true .picture {
+  background: #b2e281;
+}
+/* line 68, ../sass/index.scss */
+body #chatArea .message.me .bubble_cont.r_true .picture img {
+  margin-top: 9px;
+  margin-right: 13px;
+}
+/* line 74, ../sass/index.scss */
+body #chatArea .message.me .bubble_cont.r_true .reply .picture {
+  background: transparent;
+}
+/* line 76, ../sass/index.scss */
+body #chatArea .message.me .bubble_cont.r_true .reply .picture img {
+  float: left;
+}
+/* line 83, ../sass/index.scss */
+body #chatArea .message.me .custom_emoji {
+  overflow: hidden;
+}
+/* line 85, ../sass/index.scss */
+body #chatArea .message.me .custom_emoji img {
+  float: right;
+}
+/* line 90, ../sass/index.scss */
+body #chatArea .message .message_system {
+  text-align: center;
+  margin: 10px auto;
+  max-width: 50%;
+}
+/* line 94, ../sass/index.scss */
+body #chatArea .message .message_system .content {
+  display: inline-block;
+  background-color: #dcdcdc;
+  font-size: 12px;
+  padding: 1px 18px;
+  color: #fff;
+  border-radius: 2px;
+}
+/* line 103, ../sass/index.scss */
+body #chatArea .message .nickname {
+  font-weight: 400;
+  padding-left: 10px;
+  font-size: 12px;
+  height: 22px;
+  line-height: 24px;
+  color: #4f4f4f;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+/* line 113, ../sass/index.scss */
+body #chatArea .message .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  cursor: pointer;
+  float: left;
+}
+/* line 120, ../sass/index.scss */
+body #chatArea .message .bubble {
+  background-color: #fff;
+  max-width: -webkit-calc(100% - 70px);
+  max-width: -moz-calc(100% - 70px);
+  max-width: -ms-calc(100% - 70px);
+  max-width: -o-calc(100% - 70px);
+  max-width: calc(100% - 70px);
+  min-height: 1em;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  text-align: left;
+  font-size: 14px;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+/* line 122, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow {
+  background: transparent;
+  max-width: 100%;
+}
+/* line 123, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow.bubble_primary {
+  background: transparent;
+}
+/* line 125, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow.bubble_primary .bubble_cont.r_true {
+  background: #b2e281;
+}
+/* line 131, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow:before, body #chatArea .message .bubble.no_arrow:after {
+  display: none;
+}
+/* line 134, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow .bubble_cont {
+  border-radius: 3px;
+  overflow: hidden;
+}
+/* line 137, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow .bubble_cont.r_true {
+  background: #fff;
+}
+/* line 140, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow .bubble_cont.r_true .picture img {
+  margin-top: 9px;
+  margin-left: 13px;
+}
+/* line 146, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow .bubble_cont.r_true .custom_emoji img {
+  margin-top: 9px;
+  margin-left: 13px;
+}
+/* line 153, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow .bubble_cont.r_true .reply .picture img {
+  margin: 0;
+}
+/* line 159, ../sass/index.scss */
+body #chatArea .message .bubble.no_arrow .bubble_cont .reply {
+  margin-top: 9px;
+}
+/* line 164, ../sass/index.scss */
+body #chatArea .message .bubble.bubble_primary {
+  background-color: #b2e281;
+}
+/* line 167, ../sass/index.scss */
+body #chatArea .message .bubble:before, body #chatArea .message .bubble:after {
+  position: absolute;
+  top: 14px;
+  border: 6px solid transparent;
+  content: "  ";
+}
+/* line 173, ../sass/index.scss */
+body #chatArea .message .bubble.right {
+  float: right;
+}
+/* line 175, ../sass/index.scss */
+body #chatArea .message .bubble.right:before, body #chatArea .message .bubble.right:after {
+  left: 100%;
+  border-left-color: #b2e281;
+  border-left-width: 4px;
+}
+/* line 182, ../sass/index.scss */
+body #chatArea .message .bubble.left:before, body #chatArea .message .bubble.left:after {
+  right: 100%;
+  border-right-color: #fff;
+  border-right-width: 4px;
+}
+/* line 198, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont pre {
+  padding: 9px 13px;
+}
+/* line 201, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .voice {
+  padding: 7px 13px;
+  min-width: 27px;
+}
+/* line 204, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .voice i {
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+  display: inline-block;
+}
+/* line 210, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .voice .web_wechat_voice_gray {
+  background: url(../images/sprite27fe59.png) 0 -2427px;
+}
+/* line 212, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .voice .web_wechat_voice_gray.web_wechat_voice_gray_playing {
+  background: url(../images/web_wechat_voice_gray_playing27fe59.gif);
+}
+/* line 216, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .voice .web_wechat_voice_green {
+  background: url(../images/sprite27fe59.png) 0 -2450px;
+}
+/* line 218, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .voice .web_wechat_voice_green.web_wechat_voice_playing {
+  background: url(../images/web_wechat_voice_playing27fe59.gif);
+}
+/* line 223, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .duration {
+  position: absolute;
+  right: -75px;
+  width: 55px;
+  color: #888;
+  cursor: default;
+}
+/* line 229, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .duration i {
+  margin-left: 5px;
+}
+/* line 232, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .duration .web_wechat_noread {
+  background: url(../images/sprite27fe59.png) 0 -1422px;
+  width: 11px;
+  height: 11px;
+}
+/* line 238, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .picture {
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+/* line 242, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .picture img {
+  max-width: 70%;
+}
+/* line 247, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .custom_emoji img {
+  width: 60px;
+}
+/* line 251, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply {
+  border-radius: 3px;
+  margin: 0 13px 9px 13px;
+  padding: 9px 13px;
+  background: #f3f3f3;
+}
+/* line 256, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply pre {
+  padding: 0;
+}
+/* line 259, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply .nickname {
+  padding: 0;
+}
+/* line 262, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply .voice {
+  background: #fff;
+  display: inline-block;
+  position: relative;
+  max-width: -webkit-calc(100% - 76px);
+  max-width: -moz-calc(100% - 76px);
+  max-width: -ms-calc(100% - 76px);
+  max-width: -o-calc(100% - 76px);
+  max-width: calc(100% - 76px);
+}
+/* line 268, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply .duration {
+  width: 45px;
+  position: relative;
+  right: 0;
+  margin-left: 10px;
+  margin-top: 7px;
+  float: right;
+}
+/* line 275, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply .duration .web_wechat_noread {
+  display: inline-block;
+}
+/* line 279, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply.me {
+  overflow: hidden;
+}
+/* line 281, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply.me .content {
+  float: right;
+}
+/* line 284, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply.me .voice {
+  background: #b2e281;
+}
+/* line 287, ../sass/index.scss */
+body #chatArea .message .bubble .bubble_cont .reply.me .duration {
+  width: 25px;
+  float: left;
+  left: 0;
+  text-align: left;
+  margin-right: 10px;
+  margin-left: 0;
+}
+/* line 298, ../sass/index.scss */
+body #chatArea .message .bubble .loading {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-right: 13px;
+  margin-top: -8px;
+}
+/* line 305, ../sass/index.scss */
+body #chatArea .message .bubble .ico_fail {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  margin-top: -11px;
+  margin-right: 9px;
+  cursor: pointer;
+}
+/* line 313, ../sass/index.scss */
+body #chatArea .message .bubble .web_wechat_message_fail {
+  background: url(../images/sprite27fe59.png) 0 -1270px;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  display: inline-block;
+}
