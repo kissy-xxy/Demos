@@ -1,0 +1,36 @@
+<% var isLogin = session.authenticated;%>
+
+  <div class="jumbotron">
+    <h1>XKJ TODO</h1>
+
+    <div class="<%= (isLogin?'hide':'') %>">
+    	<a href="/session/new" class="btn btn-lg btn-success">Sign in</a>
+	    <a href="/user/new"   class="btn btn-lg btn-success">Sign up now!</a>
+    </div>
+    <a href="/session/destroy" class="<%= ('btn btn-lg btn-success '+(isLogin?'':'hide')) %>"  >Logout</a>
+  </div>
+
+  <%= JSON.stringify(session) %>
+
+	<div class="<%= 'jumbotron '+(!!session.authenticated ? '':'hide')%>" >
+		<!-- <form action="/todo" method="post">
+		<input id="todo_content" type="text" name="content" placeholder="content" />
+		<button type="submit" id="add_btn">添加</button>
+		</form> -->
+		<a  href="/home/new" class="btn btn-lg btn-success">新建</a>
+
+		<ul id="todo_list">
+			<% todos.forEach(function(todo){ %>
+			<li> 
+				<a href=<%="/"+todo.id %>> <input type="checkbox" <%= todo.done?"checked":"" %>  disabled="true" /> <%=todo.content%> </a>
+			</li>
+			<% }); %>
+			
+			<% todos_done.forEach(function(todo){ %>
+			<li> 
+				<a href=<%="/"+todo.id %>> <input type="checkbox" <%= todo.done?"checked":"" %>  disabled="true" /> <%=todo.content%> </a>
+			</li>
+			<% }); %>
+		</ul>
+	</div>
+

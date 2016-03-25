@@ -1,0 +1,32 @@
+<h2>设备</h2>
+<hr>
+<table class="table table-hover user_table  table-striped table-condensed">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>用户ID</th>
+			<th>应用</th>
+			<th>操作系统</th>
+			<th>系统版本</th>
+			<th>应用版本</th>
+			<th>Token</th>
+			<th>UserAgent</th>
+			<th>更新时间</th>
+			<th>上次卸载时间</th>
+		</tr>
+	</thead>
+	<%_.each(devices,function(device){%>
+	<tr>
+		<td><%=device.id%></td>
+		<td style="width:70px;"><%=device.user_id%></td>
+		<td style="width:70px;"><%=device.app && device.app.name||'未知'%></td>
+		<td style="width:80px;"><%=device.os_type%></td>
+		<td style="width:80px;"><%=device.os_version%></td>
+		<td style="width:90px;"><%=device.version&&device.version.number||'所有'%></td>
+		<td style="width:90px;"><%=device.token.length<0?device.token.substring(8)+"...":device.token%></td>
+		<td style="width:100px;"><%=device.user_agent%></td>
+		<td style="width:150px;"><%=device.updatedAt.Format("yyyy-MM-dd HH:mm:ss")%></td>
+		<td ><%=device.uninstalled_at.Format("yyyy-MM-dd HH:mm:ss")%></td>
+	</tr>
+	<%})%>
+</table>

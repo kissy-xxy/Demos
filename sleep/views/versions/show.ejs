@@ -1,0 +1,47 @@
+<h2>版本详情</h2>
+<hr>
+
+<div class='container'>
+	<table class="table table-condensed table-hover table-striped">
+		<thead>
+			<tr>
+				<th>属性</th>
+				<th>值</th>
+			</tr>
+		</thead>
+		<tr>
+			<td>用户ID</td>
+			<td><%=version.number%></td>
+		</tr>
+		<tr>
+			<td>应用</td>
+			<td><%=version.app&&version.app.number||'所有'%></td>
+		</tr>
+		<tr>
+			<td>分类</td>
+			<td><%=version.os_type%></td>
+		</tr>
+		<tr>
+			<td>内容</td>
+			<td><%=version.desc%></td>
+		</tr>
+		<tr>
+			<td>强制更新</td>
+			<td><%=version.mode?'是':'否'%></td>
+		</tr>
+		<tr>
+			<td>下载地址</td>
+			<td><%=version.download_url%></td>
+		</tr>
+		<tr>
+			<td>创建时间</td>
+			<td><%=version.createdAt%></td>
+		</tr>
+		<tr>
+			<td>更新时间</td>
+			<td><%=version.updatedAt.Format("yyyy-MM-dd HH:mm:ss")%></td>
+		</tr>
+		
+	</table>
+	<a class="btn btn-medium btn-default" href="/versions/index/">返回</a>
+</div>

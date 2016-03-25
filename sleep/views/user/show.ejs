@@ -1,0 +1,13 @@
+<div class='container'>
+	<h1><%= user.name %> </h1>
+	<% if (user.admin) { %>
+		<img src="/images/admin.png">管理员
+	<% } else { %>
+			<img src="/images/pawn.png">成员
+	<% } %>		
+	<h3>邮箱: <%= user.email %> </h3>
+	<br>
+	
+	<a class="btn btn-medium btn-default" href="/user/index/">返回</a>
+	<a class="btn btn-medium btn-primary" href="/user/edit/<%= user.id %>">编辑</a>
+</div>

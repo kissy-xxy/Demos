@@ -1,0 +1,22 @@
+h1{
+	margin-left: 20px;
+}
+#todo_list{
+	margin-left: 0px;
+}
+
+#todo_content{
+	margin-left: 20px;
+}
+
+.show{
+	visibility: visible;
+}
+
+.hide{
+	visibility: hidden;
+}
+
+.m-b{
+	margin-bottom: 6px;
+}

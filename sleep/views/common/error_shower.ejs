@@ -1,0 +1,13 @@
+<% try{ %>
+<% if(session.flash && session.flash.err) { %>
+<ul class="alert alert-success">
+	<% Object.keys(session.flash.err.invalidAttributes).forEach(function(error) { %>
+	<li><p> <%- error%></p>
+	<%  session.flash.err.invalidAttributes[error].forEach(function(err){ %>
+	<p> <%- err.message%></p></li>
+	<% }); %>
+	<% }); %>
+	<% session.flash.err = null;%>
+</ul>
+<% } %>
+<%}catch(e){}%>

@@ -1,0 +1,57 @@
+<h2>通知详情</h2>
+<div class='container'>
+	<table class="table table-condensed table-hover table-striped">
+		<thead>
+			<tr>
+				<th>属性</th>
+				<th>值</th>
+			</tr>
+		</thead>
+		<tr>
+			<td>用户ID</td>
+			<td><%=message.user_ids||'所有'%></td>
+		</tr>
+		<tr>
+			<td>应用</td>
+			<td><%= message.app&&message.app.name||'未指定'%></td>
+		</tr>
+		<tr>
+			<td>分类</td>
+			<td><%=message.category&&message.category.name||'未指定'%></td>
+		</tr>
+		<tr>
+			<td>内容</td>
+			<td><%=message.content%></td>
+		</tr>
+		<tr>
+			<td>payloads</td>
+			<td><%=message.payloads%></td>
+		</tr>
+		<tr>
+			<td>IOS版本</td>
+			<td><%=message.ios_version&&message.ios_version.number%></td>
+		</tr>
+		<tr>
+			<td>发送量</td>
+			<td><%=message.count_ios||0%></td>
+		</tr>
+		<tr>
+			<td>Android版本</td>
+			<td><%=message.android_version&&message.android_version.number||'无'%></td>
+		</tr>
+		<tr>
+			<td>发送量</td>
+			<td><%=message.count_android||0%></td>
+		</tr>
+		<tr>
+			<td>创建者</td>
+			<td><%=message.creator||'ihaveu'%></td>
+		</tr>
+		<tr>
+			<td>发送时间</td>
+			<td><%=message.createdAt.Format("yyyy-MM-dd HH:mm:ss")%></td>
+		</tr>
+		
+	</table>
+	<a class="btn btn-medium btn-default" href="/messages/index/">返回</a>
+</div>

@@ -1,0 +1,31 @@
+<h2>编辑应用</h2>
+<hr>
+<form action="/apps/update/<%= app.id %>" method="POST" class="form-horizontal" enctype="multipart/form-data">
+	<%- partial ('../common/error_shower.ejs') %>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">名称:</label>
+		<div class="col-sm-3">
+			<input value="<%= app.name %>" placeholder="分类名称" name="name" type="text" class="form-control"/>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">IOS Pem:</label>
+		<div class="col-sm-2">
+			<input type="file" class="form-control" name="ios_pem">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputEmail3" class="col-sm-2 control-label">IOS Cert:</label>
+		<div class="col-sm-2">
+			<input type="file" class="form-control" name="ios_cert">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+			<a class="btn btn-default btn-medium" href="/apps/index">返回</a>
+			<input type="submit" value="更新" class="btn btn-primary btn-inline"/>
+		</div>
+	</div>
+	
+</form>

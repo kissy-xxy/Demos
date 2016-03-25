@@ -1,0 +1,29 @@
+<h2>应用</h2>
+<hr>
+<a href="/apps/new" class="btn btn-success pull-left">新建</a>
+<table class="table table-hover user_table">
+	<thead>
+		<tr>
+			<th></th>
+			<th>ID</th>
+			<th>名称</th>
+			<th>IOS cert</th>
+			<th>IOS key</th>
+			<th>创建时间</th>
+		</tr>
+	</thead>
+	<%_.each(apps,function(app){%>
+	<tr>
+		<td style="width:160px;">
+			<a href="<%= '/apps/edit/'+app.id%>" class="btn btn-primary inline">编辑</a>
+			<a href="<%= '/apps/destroy/'+app.id%>" class="btn btn-danger inline">删除</a>
+		</td>
+		<td><%=app.id%></td>
+		<td><%=app.name%></td>
+		<td><%=app.ios_cert%></td>
+		<td><%=app.ios_key%></td>
+		<td><%=app.createdAt.Format("yyyy-MM-dd HH:mm:ss")%></td>
+		
+	</tr>
+	<%})%>
+</table>

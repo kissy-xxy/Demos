@@ -1,0 +1,21 @@
+<form action="/session/login" method="POST" class="container" style="width:400px" role="form">
+	<h2 class="form-signin-heading">优众·管理平台</h2>
+
+	<% if(session.flash && session.flash.err) { %>
+	<ul class="alert alert-success">
+		<% session.flash.err.forEach(function(error) { %>
+		<li><%- JSON.stringify(error.message) %></li>
+		<% }) %>
+	</ul>
+	<!-- clear -->
+	<%session.flash=null%>
+	<% } %>
+	<div class="input-group m-b">
+		<input type="text" name="username" class="form-control" placeholder="Email" aria-describedby="basic-addon2">
+		<span class="input-group-addon" id="basic-addon2">@ihaveu.net</span>
+	</div>
+	<input type="password" class="form-control m-b" placeholder="Password" name="password">
+	<input type="submit" class="btn btn-default btn-block m-b" style="width:50px;" value="登录"/>
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+	
+</form>

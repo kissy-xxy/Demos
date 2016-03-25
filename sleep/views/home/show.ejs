@@ -1,0 +1,10 @@
+
+<div class="jumbotron">
+
+<p><input type="checkbox" <%= done?"checked":"" %>  disabled="true" /> <%=content%></p>
+<a href=<%= "/edit/"+id %> class="btn-lg btn-success btn" >编辑</a>
+<form method="post" action=<%="/destroy/"+id %>  >
+	<button type="submit" class="btn" >删除</button>
+</form>
+
+</div>

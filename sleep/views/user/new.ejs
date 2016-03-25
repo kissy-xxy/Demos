@@ -1,0 +1,36 @@
+<h2 class="form-signin-heading">创建新用户</h2>
+<hr>
+<form action="/user/create" method="POST" id="sign-up-form" class="form-horizontal" style="">
+	<% try{ %>
+	<% if(session.flash && session.flash.err) { %>
+	<ul class="alert alert-success">
+		<% Object.keys(session.flash.err.invalidAttributes).forEach(function(error) { %>
+		<li><p> <%- error%></p>
+		<%  session.flash.err.invalidAttributes[error].forEach(function(err){ %>
+		<p> <%- err.message%></p></li>
+		<% }); %>
+		<% }); %>
+		<% session.flash.err = null;%>
+	</ul>
+	<% } %>
+	<%}catch(e){}%>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">昵称:</label>
+		<div class="col-sm-3">
+			<input type="text" class="form-control" placeholder="your name" name="name">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">邮箱:</label>
+		<div class="col-sm-3 input-group">
+			<input type="text" class="form-control" placeholder="email address" name="email">
+			<span class="input-group-addon" id="basic-addon2">@ihaveu.net</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+			<a class="btn btn-medium btn-default" href="/user/index/">返回</a>
+			<input type="submit" class="btn btn-success btn-inline" value="创建"/>
+		</div>
+	</div>
+</form>

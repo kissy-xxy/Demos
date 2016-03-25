@@ -1,0 +1,18 @@
+<h2>编辑分类</h2>
+<hr>
+<form action="/categories/update/<%= category.id %>" method="POST" class="form-horizontal">
+	<%- partial ('../common/error_shower.ejs') %>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">名称:</label>
+		<div class="col-sm-3">
+			<input value="<%= category.name %>" placeholder="分类名称" name="name" type="text" class="form-control"/>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+			<a class="btn btn-default btn-medium" href="/categories/index">返回</a>
+			<input type="submit" value="更新" class="btn btn-primary btn-inline"/>
+		</div>
+	</div>
+	
+</form>

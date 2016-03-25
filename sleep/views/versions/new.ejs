@@ -1,0 +1,57 @@
+<h2>新建版本</h2>
+<hr>
+<form action="/versions/create" method="POST" class="form-horizontal">
+	<%- partial ('../common/error_shower.ejs') %>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">版本号:</label>
+		<div class="col-sm-3">
+			<input value="" placeholder="版本号" name="number" type="text" class="form-control"/>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">应用:</label>
+		<div class="col-sm-3">
+			<select name="app" class="form-control">
+				<% if(apps){%>
+				<% _.each(apps,function(app){%>
+				<option value="<%=app.id%>"><%=app.name%></option>
+				<%}) %>
+				<%}%>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">操作系统:</label>
+		<div class="col-sm-3">
+			<select name="os_type" class="form-control">
+				<option value="android">Android</option>
+				<option value="ios">IOS</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">描述:</label>
+		<div class="col-sm-3">
+			<textarea value="" placeholder="版本描述" name="desc" type="text" class="form-control"></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">强制更新:</label>
+		<div class="col-sm-3">
+			<input placeholder="分类名称" name="mode" type="checkbox"/>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">下载地址:</label>
+		<div class="col-sm-3">
+			<input value="" placeholder="下载地址" name="download_url" type="text" class="form-control"/>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-4">
+			<a class="btn btn-default btn-medium" href="/versions/index">返回</a>
+			<input type="submit" value="新建" class="btn btn-success btn-inline"/>
+		</div>
+	</div>
+	
+</form>

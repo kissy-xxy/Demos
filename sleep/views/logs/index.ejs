@@ -1,0 +1,22 @@
+<h2>日志</h2>
+<hr>
+<table class="table table-hover user_table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>通知ID</th>
+			<th>错误码</th>
+			<th>创建时间</th>
+		</tr>
+	</thead>
+	<%_.each(logs,function(log){%>
+	<tr>
+		<td><%=log.id%></td>
+		<td><%=log.message&&log.message.id%></td>
+		<td><%=log.error_code%></td>
+		<td><%=log.createdAt.Format("yyyy-MM-dd HH:mm:ss")%></td>
+	</tr>
+	<%})%>
+</table>
+
+<p class="<%= (logs&&logs.length>0)?'hide':'' %>" >没有数据</p>

@@ -1,0 +1,38 @@
+<h2>通知</h2>
+<hr>
+<a href="/messages/new" class="btn btn-success pull-left">发送通知</a>
+
+<table class="table table-hover user_table">
+	<thead>
+		<tr>
+			<th></th>
+			<th>ID</th>
+			<th>用户ID</th>
+			<th>应用</th>
+			<th>分类</th>
+			<th>IOS版本</th>
+			<th>发送量</th>
+			<th>Android版本</th>
+			<th>发送量</th>
+			<th>创建者</th>
+			<th>发送时间</th>
+		</tr>
+	</thead>
+	<%_.each(messages,function(msg){%>
+	<tr>
+		<td style="width:80px;">
+			<a href="<%= '/messages/show/'+msg.id%>" class="btn btn-default inline">查看</a>
+		</td>
+		<td><%=msg.id%></td>
+		<td><%= msg.user_ids? (msg.user_ids.length>3? msg.user_ids.slice(0,3)+"...共"+msg.user_ids.length+"个":(msg.user_ids.length>0?msg.user_ids:'空')) :'所有'%></td>
+		<td><%= msg.app && msg.app.name||'未指定'%></td>
+		<td><%=(msg.category)?msg.category.name:'未指定'%></td>
+		<td><%=msg.ios_version?msg.ios_version.number:'所有'%></td>
+		<td><%=msg.count_ios||0%></td>
+		<td><%=msg.android_version&&msg.android_version.number||'所有'%></td>
+		<td><%=msg.count_android||0%></td>
+		<td><%=msg.creator||'ihaveu'%></td>
+		<td><%=msg.createdAt.Format("yyyy-MM-dd HH:mm:ss") %></td>
+	</tr>
+	<%})%>
+</table>

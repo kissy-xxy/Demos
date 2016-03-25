@@ -1,0 +1,9 @@
+
+<div class="jumbotron">
+<form action=<%="/update/"+id%> method="post">
+
+	<input name="done" type="checkbox" <%=(done?"checked":"") %> />
+	<input id="todo_content" type="text" name="content" placeholder="content" value=<%=content %>  />
+	<button type="submit" class="btn btn-lg" id="update_btn">更新</button>
+</form>
+</div>
