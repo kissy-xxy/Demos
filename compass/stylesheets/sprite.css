@@ -1,0 +1,62 @@
+/* icon to sprite //@import "{foldername}/*png"  space = 2px   layout = "vertical/horizontal/diagonal/smart"*/
+/* line 88, icon/*.png */
+.icon-sprite, .icon-bust, .icon-hip, .icon-logo, .icon-price, .icon-tab, .icon-waistline, .new_class_name {
+  background-image: url('/images/icon-s6e07cbc015.png');
+  background-repeat: no-repeat;
+}
+
+/*/all icon class //all-{foldername}-sprites */
+/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-bust {
+  background-position: -25px -119px;
+}
+
+/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-hip {
+  background-position: -50px -119px;
+}
+
+/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-logo {
+  background-position: 0 0;
+}
+
+/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-price {
+  background-position: -66px -119px;
+}
+
+/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-tab {
+  background-position: 0 -74px;
+}
+
+/* line 84, C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-waistline {
+  background-position: 0 -119px;
+}
+
+/* load your need ico with custom classname and content with {folername}-sprite({icon-name})*/
+/* line 10, ../sass/sprite.scss */
+.new_class_name {
+  background-position: -50px -119px;
+}
+
+/*sprite maps----space = 3px*/
+/* line 16, ../sass/sprite.scss */
+.abc {
+  background: url('/images/icon-s67946c1621.png') -25px -119px;
+}
+
+/* line 17, ../sass/sprite.scss */
+.xyz {
+  background: url('/images/icon-s67946c1621.png') 0 -74px;
+}
+
+/* line 19, ../sass/sprite.scss */
+.icon-bust {
+  background-image: url('/images/icon-s67946c1621.png');
+  background-position: -25px -119px;
+  height: 24px;
+  width: 25px;
+}

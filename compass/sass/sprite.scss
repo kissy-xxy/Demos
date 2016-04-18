@@ -1,0 +1,24 @@
+/* icon to sprite //@import "{foldername}/*png"  space = 2px   layout = "vertical/horizontal/diagonal/smart"*/
+$icon-spacing: 2px;
+$icon-layout: 'smart';
+@import "icon/*.png";
+
+/*/all icon class //all-{foldername}-sprites */
+@include all-icon-sprites;
+
+/* load your need ico with custom classname and content with {folername}-sprite({icon-name})*/
+.new_class_name {@include icon-sprite(hip);}
+
+/*sprite maps----space = 3px*/
+
+$icons: sprite-map("icon/*.png",$spacing:8px,$layout:smart);
+
+.abc{background: sprite($icons,bust)}
+.xyz{background: sprite($icons,tab)}
+
+.icon-bust{
+	background-image: sprite-url($icons);
+	background-position: sprite-position($icons,bust);
+  @include sprite-dimensions($icons,bust);
+}
+
